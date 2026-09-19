@@ -1,0 +1,26 @@
+name:  Build APK
+
+on:  
+  push:  
+    branches:  [main,master]
+  workflow_dispatch:  {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up JDK 17
+      uses: actions/checkout@v4
+      with: 
+        distribution: temurin
+        java-verson: 17
+
+      - name: Set up Andriod SDK
+      uses: android-actions/setup-android@v3
+
+      - name: Set up Gradle
+      uses: actions/upload-artifact@v4
+      with: 
+        name: deck-bridge-debug-apk
+        path: app/build/outputs/apk/debug/app-debug.apk
+        

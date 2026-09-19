@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.DeckBridge" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#E2A33D</item>
+        <item name="colorPrimaryDark">#12151A</item>
+        <item name="colorAccent">#E2A33D</item>
+    </style>
+</resources>

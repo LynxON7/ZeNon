@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#12151A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deck Bridge"
+            android:textColor="#E7E5E0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forwards notifications from selected apps into a Notion database."
+            android:textColor="#8B93A1"
+            android:textSize="13sp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Notification access"
+            android:textColor="#E2A33D"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <Button
+            android:id="@+id/btnGrantAccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open notification access settings"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Notion connection"
+            android:textColor="#E2A33D"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/inputToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notion integration token (secret_...)"
+            android:inputType="textPassword"
+            android:textColor="#E7E5E0"
+            android:textColorHint="#565F6B"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/inputDatabaseId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notion database ID"
+            android:textColor="#E7E5E0"
+            android:textColorHint="#565F6B"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Apps to forward"
+            android:textColor="#E2A33D"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <CheckBox
+            android:id="@+id/chkInstagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instagram"
+            android:textColor="#E7E5E0"
+            android:checked="true" />
+
+        <CheckBox
+            android:id="@+id/chkWhatsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WhatsApp"
+            android:textColor="#E7E5E0"
+            android:checked="true" />
+
+        <CheckBox
+            android:id="@+id/chkDiscord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discord"
+            android:textColor="#E7E5E0"
+            android:checked="true"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save settings"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. AI brain"
+            android:textColor="#E2A33D"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Online questions go to Gemini (free). Offline, it falls back to an on-device model if you've set one up."
+            android:textColor="#8B93A1"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/inputGeminiKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gemini API key (from aistudio.google.com)"
+            android:inputType="textPassword"
+            android:textColor="#E7E5E0"
+            android:textColorHint="#565F6B"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/inputLocalModelPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Local model file path (optional, see README)"
+            android:textColor="#E7E5E0"
+            android:textColorHint="#565F6B"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnSaveBrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save AI settings"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/inputTestPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Try a question here"
+            android:textColor="#E7E5E0"
+            android:textColorHint="#565F6B"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnTestAsk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ask"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/txtAiAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#E7E5E0"
+            android:textSize="13sp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#8B93A1"
+            android:textSize="12sp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. Zenon (wake word &amp; voice)"
+            android:textColor="#E2A33D"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Costs more battery than Siri — this runs as a normal background service, not a low-power chip. See README."
+            android:textColor="#8B93A1"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/inputPicovoiceKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Picovoice AccessKey (console.picovoice.ai)"
+            android:inputType="textPassword"
+            android:textColor="#E7E5E0"
+            android:textColorHint="#565F6B"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/inputElevenLabsKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ElevenLabs API key"
+            android:inputType="textPassword"
+            android:textColor="#E7E5E0"
+            android:textColorHint="#565F6B"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/inputElevenLabsVoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ElevenLabs voice ID"
+            android:textColor="#E7E5E0"
+            android:textColorHint="#565F6B"
+            android:layout_marginBottom="14dp" />
+
+        <Button
+            android:id="@+id/btnSaveVoiceSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save voice settings"
+            android:layout_marginBottom="14dp" />
+
+        <Button
+            android:id="@+id/btnEnroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enroll my voice"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/txtEnrollStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#8B93A1"
+            android:textSize="12sp"
+            android:layout_marginBottom="14dp" />
+
+        <Button
+            android:id="@+id/btnStartZenon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start listening for Zenon"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnStopZenon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop" />
+
+    </LinearLayout>
+</ScrollView>
